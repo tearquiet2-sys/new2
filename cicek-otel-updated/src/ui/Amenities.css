@@ -1,0 +1,180 @@
+.amenities {
+  padding: 80px 0;
+  background: #f8f9fa;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: #333;
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 2px;
+}
+
+.amenities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.amenity-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.amenity-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.amenity-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.amenity-card:hover .amenity-image {
+  transform: scale(1.05);
+}
+
+.amenity-icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 2rem;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 10px;
+  border-radius: 50%;
+  backdrop-filter: blur(10px);
+}
+
+.amenity-card h3 {
+  padding: 1.5rem 1.5rem 0.5rem;
+  color: #333;
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+.amenity-card p {
+  padding: 0 1.5rem 1rem;
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.room-price {
+  padding: 0 1.5rem 1.5rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #28a745;
+  margin: 0;
+}
+
+/* Room Cards Specific Styles */
+.amenities-grid:first-of-type .amenity-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.amenities-grid:first-of-type .amenity-card h3 {
+  color: white;
+}
+
+.amenities-grid:first-of-type .amenity-card p {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.amenities-grid:first-of-type .room-price {
+  color: #ffd700;
+}
+
+/* Amenity Cards Specific Styles */
+.amenities-grid:last-of-type .amenity-card {
+  background: white;
+}
+
+.amenities-grid:last-of-type .amenity-card h3 {
+  color: #333;
+}
+
+.amenities-grid:last-of-type .amenity-card p {
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .amenities {
+    padding: 60px 0;
+  }
+
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .amenities-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 0 15px;
+  }
+
+  .amenity-card h3 {
+    font-size: 1.2rem;
+    padding: 1rem 1rem 0.5rem;
+  }
+
+  .amenity-card p {
+    padding: 0 1rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .room-price {
+    padding: 0 1rem 1rem;
+    font-size: 1.1rem;
+  }
+
+  .amenity-icon {
+    font-size: 1.5rem;
+    padding: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .amenities {
+    padding: 40px 0;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .amenity-image {
+    height: 150px;
+  }
+
+  .amenity-icon {
+    font-size: 1.2rem;
+    padding: 6px;
+    top: 15px;
+    right: 15px;
+  }
+}

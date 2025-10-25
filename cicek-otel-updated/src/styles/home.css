@@ -1,0 +1,15 @@
+main {
+  display: block;
+  width: 100%;
+}
+
+.section-title + .amenities-grid {
+  margin-top: 1rem;
+}
+
+/* Mobil küçük iyileştirmeler */
+@media (max-width: 480px) {
+  .reservation-form {
+    padding: 1.25rem;
+  }
+}
